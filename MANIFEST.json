@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "category": "build",
+      "path": ".gitignore",
+      "source": "generated",
+      "bytes": 69,
+      "sha256": "acd1c64bc6f9b3dcc1123cd87361d3d077fd40c890ae25786fb33b7c52fcaa22"
+    },
+    {
+      "category": "license",
+      "path": "LICENSE",
+      "source": "CNMSwarmSim/LICENSE",
+      "bytes": 1086,
+      "sha256": "79c91547bdce42824a60f10b293c22a3bdca0dce3d4224a0c7020f372544fa90"
+    },
+    {
+      "category": "documentation",
+      "path": "MANUSCRIPT_METHODS_MAP.md",
+      "source": "generated",
+      "bytes": 3913,
+      "sha256": "80b8601ed80efcbe451dc0bd7558d1788fb433568a91ae3783c7ef87549477a4"
+    },
+    {
+      "category": "documentation",
+      "path": "README.md",
+      "source": "CNMSwarmSim/release_templates/CODE_README.md",
+      "bytes": 16644,
+      "sha256": "56558bc55a53f062e74e697c4e63c69e6f46f0bc40f0b628d17f5c2e734da1c9"
+    },
+    {
+      "category": "documentation",
+      "path": "RELEASE_AUDIT.md",
+      "source": "generated",
+      "bytes": 1364,
+      "sha256": "2715f59b6e743635a4177db6f377e282168e454cfa8f462e5af6fca23dc78132"
+    },
+    {
+      "category": "license",
+      "path": "THIRD_PARTY_NOTICE.md",
+      "source": "CNMSwarmSim/THIRD_PARTY_NOTICE.md",
+      "bytes": 704,
+      "sha256": "510bf519c6a9fb7ca4ce71171049f384152c8a5ae9aba82967c55e464d53ce96"
+    },
+    {
+      "category": "documentation",
+      "path": "docs/METHODS_CODE_ALIGNMENT_AUDIT_V2.md",
+      "source": "CNMSwarmSim/METHODS_CODE_ALIGNMENT_AUDIT_V2.md",
+      "bytes": 5350,
+      "sha256": "eb3c7dc8526666ccecc783ceecd41df16b8177ff38260a0b0dcad3fe18812484"
+    },
+    {
+      "category": "build",
+      "path": "pyproject.toml",
+      "source": "generated",
+      "bytes": 751,
+      "sha256": "4fa97bff2ce1d8941f26794439b7f61e9be9a83629aa78e2c167e0fe53730930"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/__init__.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/__init__.py",
+      "bytes": 230,
+      "sha256": "e02c05707ebab192327096382bc4f55bf766fc8d2fc1466b27bf7d13b793c58f"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/_bootstrap.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/_bootstrap.py",
+      "bytes": 614,
+      "sha256": "69b510a1591d9963adca21a5c3f53090734bf60a9b260bcaaa1aca468482eae1"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/__init__.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/__init__.py",
+      "bytes": 860,
+      "sha256": "e0297b05d97af26a14572d31c05f3fc64c6f344ebf745a654551a82efb62428c"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/eef.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/eef.py",
+      "bytes": 42020,
+      "sha256": "a4446df2d82f8f544c0eb609e7c5b64579bbf04e34d240b3dc51f296f374c341"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/eef_benchmark.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/eef_benchmark.py",
+      "bytes": 16726,
+      "sha256": "5cb49dcc7a8c0939478d16eaf2ec6af6eb32c7ef5395a789d86446ae24ad9cbe"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/evaluation.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/evaluation.py",
+      "bytes": 8653,
+      "sha256": "e5ff55a60578779c2decd75ebd673b82562809ffe8ff126e3a9576775d7f0071"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/experience.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/experience.py",
+      "bytes": 23308,
+      "sha256": "c8ef636c0ca157894f012bc4f808d4a7ff3f9703a23486d827571997472d7d6d"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/frozen.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/frozen.py",
+      "bytes": 2312,
+      "sha256": "50408846ab1bb0faed8b31bb8d285942fbcb20069ac79770b00555453baa1698"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/memory.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/memory.py",
+      "bytes": 74283,
+      "sha256": "6860b2bfc2f2693e059052c69d95fb5fd7cff019d01392d837d1db53c670ff5e"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/protocol.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/protocol.py",
+      "bytes": 6113,
+      "sha256": "828605ccba1ef661f5c2b1a3bfd8b8e88416c8abfc7c769346d72f666ee9d9a6"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/reconfigurable_protocol.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/reconfigurable_protocol.py",
+      "bytes": 7828,
+      "sha256": "ab2a00c9fddfd807ad764c8bcbd8b111a045a21bccc2d7702b88746627ad0817"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/algorithm/rollout.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/algorithm/rollout.py",
+      "bytes": 31454,
+      "sha256": "3d9a8dfa346f48a55e8690ecea8d34ae7961e63d35c5355bd0994a721039dd76"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/build_formal_evidence_bundle.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/build_formal_evidence_bundle.py",
+      "bytes": 18841,
+      "sha256": "09c9c3db525c603c822e175a3d6abf56ca7dd97680c30c0df7203944874afb69"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/config.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/config.py",
+      "bytes": 2760,
+      "sha256": "daa0e230fd2ad2e5e2261ce875d6068ff697d57f9da1755ce5f245265fa91d74"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/env.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/env.py",
+      "bytes": 35270,
+      "sha256": "5c376a6448648505e56347566e14dc202f8fdfdcc15fc49fa7543cda60a2c369"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_collective_cnm_experiment.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_collective_cnm_experiment.py",
+      "bytes": 42113,
+      "sha256": "e0e32bc49d9eb3c484bbdd3bf47658aba539fb0621360d54acdd519ecddce037"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_context_evidence_ablation.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_context_evidence_ablation.py",
+      "bytes": 14219,
+      "sha256": "923eace53e5a54f49f0651b9125cd84c19093e283fb11977d624fe9651d3677b"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_eef_formation_ablation.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_eef_formation_ablation.py",
+      "bytes": 12845,
+      "sha256": "2a7b309e19b5da42d8c9b2097dc25e79a07c2582a06d9ebd2eee364e576d5f93"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_eef_study.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_eef_study.py",
+      "bytes": 18065,
+      "sha256": "7991e259e0efaeb9443be020f0262d345eefd89815864ba4ad97eb2f5678cb30"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_eef_training_efficiency.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_eef_training_efficiency.py",
+      "bytes": 53444,
+      "sha256": "e4b10e1da07a07483a4337b727eaffaa95c6c6b700768dc8abbab698987a6a36"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_embodied_experience.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_embodied_experience.py",
+      "bytes": 38093,
+      "sha256": "33248117aa3b214f13c7f845fd8582fb623f62d8b69b9af0a608dbacfe51cc08"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/run_reconfigurable_individual_cnm.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/run_reconfigurable_individual_cnm.py",
+      "bytes": 41529,
+      "sha256": "5fec0860c2fd84cb16619c5353efe3e8a01d180d994ff55c285efdd8a81b2d59"
+    },
+    {
+      "category": "implementation",
+      "path": "src/cnm_swarm_sim/scenarios.py",
+      "source": "CNMSwarmSim/src/cnm_swarm_sim/scenarios.py",
+      "bytes": 34899,
+      "sha256": "21a8a9d6c9526be1b49f3bf36c4c53192ec8a9001b3e0b87d0dd08a1f8c08e6b"
+    },
+    {
+      "category": "validation",
+      "path": "src/cnm_swarm_sim/validate_release.py",
+      "source": "generated",
+      "bytes": 1572,
+      "sha256": "f653a99d54fe64c471e6912213f62392d3ee70bdbef23a3db3c40f76ac4b1dff"
+    },
+    {
+      "category": "test",
+      "path": "tests/test_core_mechanisms.py",
+      "source": "generated",
+      "bytes": 4531,
+      "sha256": "341394e6c8a844c1422d24d0eff5481f4e7671335edda0eea94b108a1d42430c"
+    }
+  ]
+}
