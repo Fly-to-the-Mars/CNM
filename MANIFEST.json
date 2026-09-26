@@ -22,39 +22,15 @@
     },
     {
       "category": "documentation",
-      "path": "MANUSCRIPT_METHODS_MAP.md",
-      "bytes": 3670,
-      "sha256": "2e332a5837197f7a8935e2597329b9b62672c313fa14ee2ee64e6a793cb7a8fb"
-    },
-    {
-      "category": "documentation",
       "path": "README.md",
-      "bytes": 10688,
-      "sha256": "2bcabb3f797483b68d198721b472e33814fb46df2a9e58faf0f4c4a2d7060874"
-    },
-    {
-      "category": "documentation",
-      "path": "RELEASE_AUDIT.md",
-      "bytes": 3240,
-      "sha256": "3a061cb6c78cc00204bd6a2cbdac1b4f53d1e498325248864cafbb976b798b85"
+      "bytes": 10207,
+      "sha256": "6106a03d41f43b147bde4197464a3864cafdc6fb59cd41642c38e3d8a96d6507"
     },
     {
       "category": "documentation",
       "path": "THIRD_PARTY_NOTICE.md",
       "bytes": 704,
       "sha256": "510bf519c6a9fb7ca4ce71171049f384152c8a5ae9aba82967c55e464d53ce96"
-    },
-    {
-      "category": "documentation",
-      "path": "docs/IMPLEMENTATION_SCOPE.md",
-      "bytes": 6507,
-      "sha256": "0e77351eba33cdaef48b91149add0d08639a5a487dbfdf113bde320aec5c86b0"
-    },
-    {
-      "category": "documentation",
-      "path": "docs/METHODS_CODE_ALIGNMENT_AUDIT_V2.md",
-      "bytes": 392,
-      "sha256": "fd508cd6ae41b3bc3c19c2e3e4e08274114e412db325328afc128ad97fee0338"
     },
     {
       "category": "metadata",

@@ -12,11 +12,8 @@ execution → experience records → composition → new execution → evidence 
 ```
 
 This repository implements formation, individual composition and collective
-history-sharing experiments in simulation. Start with the runnable workflow
-below, then use the [Methods map](MANUSCRIPT_METHODS_MAP.md) to locate each
-mechanism. [Implementation scope](docs/IMPLEMENTATION_SCOPE.md) specifies the
-released backend and its differences from the manuscript's flight architecture
-and verification protocol.
+history-sharing experiments in simulation. The code structure and workflows
+below describe the released modules and how to run them locally.
 
 ## Fixed and adaptive state
 
@@ -62,8 +59,6 @@ tools/verify_release.py
 The simulation policy uses 24 range rays, an MLP encoder, a 96-unit GRU,
 a local velocity/yaw-rate sequence, and a terminal-distribution observer.
 Its 15 response steps are not the manuscript network's 15 candidate scores.
-The [Methods map](MANUSCRIPT_METHODS_MAP.md) distinguishes shared mechanisms
-from differing network dimensions and operator semantics.
 
 ## Install
 
@@ -171,8 +166,7 @@ withholding. Whole-team completion requires every robot to complete its task.
 The selective experiment uses a pooled candidate view to choose missing
 records before transfer to private libraries. Its byte counter measures the
 serialized initial transfers; direct return-event merges are not fully charged
-as network traffic. See [Implementation scope](docs/IMPLEMENTATION_SCOPE.md)
-before interpreting this as a distributed communication implementation.
+as network traffic.
 
 Inspect `collective_trials.csv`, `complementarity_audit.csv`,
 `transfer_audit.csv`, `execution_return_events.csv`, and
@@ -220,6 +214,6 @@ can recover the adaptive state while retaining the deletion/restoration trace.
 
 `MANIFEST.json` and `MANIFEST.csv` identify files in this distribution.
 `docs/RUNTIME_BASELINE.json` binds the unchanged runtime sources and the restored
-checkpoint-hash dependency. [Release verification](RELEASE_AUDIT.md) describes
-the validation performed, and [third-party provenance](THIRD_PARTY_NOTICE.md)
-documents external dependencies.
+checkpoint-hash dependency. Run `python tools/verify_release.py` to check
+these files. [Third-party provenance](THIRD_PARTY_NOTICE.md) documents external
+dependencies.
