@@ -1,32 +1,43 @@
+# Methods and implementation correspondence
 
-# Manuscript-to-code traceability
+This map refers to Materials and Methods and Supplementary Methods S1–S8 of
+the current manuscript. The implementation column describes the released
+simulation. Detailed differences appear in
+[Implementation scope](docs/IMPLEMENTATION_SCOPE.md).
 
-| CNM mechanism | Reference implementation | Failure mode addressed | Primary evidence/control | Frozen/adaptive separation |
-|---|---|---|---|---|
-| Frozen execution stack | `algorithm/frozen.py` | hidden post-deployment parameter changes | source/config/checkpoint hashes | the manifest defines `W*`; its digest is fixed |
-| Privileged feasibility and differentiable physical rollout | `algorithm/eef.py`, `algorithm/eef_benchmark.py` | unsafe or dynamically inconsistent local response | formation ablations | training ends before deployment |
-| Terminal-outcome supervision | `EEFPolicy.outcome_head`, `ExperienceCompiler` gates | successful motion with dispersed, unusable exits | calibration, dispersion, repeatability, connector yield | predictor and gates belong to `W*` |
-| Immutable execution event | `memory.ExecutionEvent` | rejected/failed attempts disappear; duplicate forwarding inflates evidence | deterministic IDs, content hash, idempotent merge | events are appended to `A` |
-| Verified experience record | `memory.ExperienceRecord`, `experience.ExperienceCompiler` | open-loop trajectory replay is mistaken for reusable experience | terminal/clearance/minimum-support gates | compiler rule fixed; records evolve |
-| Split/merge and provenance | `compile_variants`, `merge_compatible_records` | multimodal outcomes are averaged; origins are lost | parent IDs and operator audit | operators fixed; record set changes |
-| Entry/exit interfaces | `InterfaceSummary`, `CNMPlanner.place` | geometric resemblance licenses unsupported execution | finite support, covariance and placement gates | thresholds fixed in `PlannerConfig` |
-| Conservative composition | `connector_assessment`, `compose` | adjacency is treated as executability | lower reliability, stitch probability, A* budget | evidence changes; scoring/search rules do not |
-| Closed-loop replanning | `algorithm/rollout.py` | a stored global chain is replayed open loop | execute first response, replan from measured exit | rollout operator belongs to `W*` |
-| Individual growth | `run_reconfigurable_individual_cnm.py` | complete-route leakage or policy fine-tuning explains growth | unseen A+C+B tasks, retention, deletion/restoration | probes are read-only; weights unchanged |
-| Context evidence | `posterior_parameters`, `run_context_evidence_ablation.py` | a local failure globally poisons a response | context-collapse ablation | ledger changes; kernel/decay remain fixed |
-| Selective circulation | `select_for_query`, `merge_packet` | dense broadcast or best-history replication explains collective gain | unrestricted/pooling/private controls | private `A_i` states remain explicit |
-| Complementary histories | `run_collective_cnm_experiment.py` | one robot already contains full capability | private/union audit, redundancy and source withholding | provenance is retained in `A_i` |
-| Execution return | `_return_execution_evidence` | shared records never receive recipient evidence | feedback withholding and adverse-return probes | return changes evidence, never `W*` |
+| Mechanism | Code | Correspondence |
+|---|---|---|
+| Fixed execution stack | `algorithm/frozen.py`; `model_sha256` | Weights/configuration/source hashes; separate recurrent state |
+| EEF formation | `algorithm/eef.py`; `run_eef_training_efficiency.py` | Privileged guidance, differentiable surrogate rollouts and outcome supervision; different execution network from S2 |
+| Execution architecture, S2 | `EEFPolicy` | 24-ray MLP, 96-unit GRU, response-sequence head and terminal-distribution head |
+| Record compilation, S3 | `FlightSegment`; `ExperienceCompiler.compile` | Measured interfaces and admission gates; optional forecast and batch compilation differ from prospective verification |
+| Finite support, S3–S4 | `InterfaceSummary`; `entry_distance`; `connector_assessment` | Samples retained; gates use centre-based radii, not per-sample support neighborhoods |
+| Evidence score | `posterior_parameters`; `beta_quantile` | Unique-event context/age weighting, plus an executor-count discount; compiler success includes admission |
+| Placement/search, S4 | `CNMPlanner.place`; `compose` | Rigid yaw/translation, uncertainty gates and bounded A*; geometric connector score |
+| Feedback execution | `algorithm/rollout.py` | Measured-exit replanning and bridge telemetry; incomplete standalone bridge-event ledger |
+| Individual controls, S5 | `run_reconfigurable_individual_cnm.py` | 24 modular tasks, A+C+B, read-only probes, deletion/restoration; separate from competition hardware |
+| Equal-information graph | `_equal_graph_path` | Minimum-duration record per role and canonical role adjacency; not full E-Graphs |
+| Circulation, S6 | `select_for_query`; `merge_packet`; collective runner | Hashed payloads and deduplication; experimental selector accesses a pooled candidate union |
+| Recipient return | `_return_execution_evidence` | Measured exits where available; incomplete attempt metadata and recipient-local support promotion |
+| Communication | `_communicate`; return routine | Initial serialized payload counted; direct return merges are not fully charged as transmissions |
 
-## Parameter correspondence
+## Configuration correspondence
 
-The reference simulator and the hardware-oriented manuscript description are
-not numerically identical. The current tested simulator uses 24 range rays, a
-96-unit recurrent state, 15 response steps, 28 candidates and a 128-record
-budget. The manuscript text describes a four-block stereo encoder, 256-unit
-recurrent module, 64 B-spline candidates, a 2 s response and 512 records.
-Changing these defaults would invalidate the archived checkpoints and results,
-so the release preserves the tested configuration and reports the discrepancy
-instead of silently relabelling it. A hardware release must provide the stereo
-model, calibration, controller bridge and matching frozen manifests before the
-hardware-specific values can be claimed as code-reproduced.
+| Quantity | Released default | Current manuscript |
+|---|---|---|
+| Observation | 24 ranges + 17 state/context values | 1×12×16 depth + 10 state values + separate 6-value reference |
+| Recurrent state | 96 | 192 |
+| Fusion | Concatenate two 64-value branches | Add two 192-value branches |
+| Outputs | 15×4 response sequence; 7-value mean and 28 Cholesky parameters | 15 scores; scalar retention; 3×2 control output |
+| Teacher candidates | 9×3 moving candidates + stop | Distinct from network candidate scores |
+| Active record target | 128; last record of each role protected | 512 records or 24 MB |
+| Retrieval | 32 | 32 |
+| Search expansions / chain length | 160 / 6 | 160 / 6 |
+| Entry / connector threshold | 14.1 / 14.1 | 14.1 / 14.1 |
+| Bridge duration | 0.35 s | 0.35 s |
+| Position / velocity / yaw admission | 0.25 m / 0.35 m s−1 / 12°, vector norms for position/velocity | Same values in componentwise bounds |
+| Clearance / admitted executions | 0.25 m / 3 | 0.25 m / 3 independent resets |
+
+Shared numbers do not establish identical operators. Reset independence and
+the 24 MB storage limit are not enforced by this implementation. The source
+is preserved rather than changing defaults to match text without re-evaluation.

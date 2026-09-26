@@ -1,240 +1,117 @@
 {
-  "schema_version": 2,
-  "manifest_scope": "All released files except the two self-referential inventory files. Git metadata, caches, build outputs and runs are excluded.",
+  "schema_version": 1,
+  "base_commit": "7f95490df913dbdd525cdd6852b75deabcb05a7f",
+  "existing_files_unchanged": 26,
+  "restored_dependency": "src/cnm_swarm_sim/algorithm/individual_protocol.py",
   "files": [
     {
-      "category": "metadata",
-      "path": ".gitattributes",
-      "bytes": 89,
-      "sha256": "c9307e0c8e0ba57e4d3f52abe739e3e937dd87a6a70ae40f590f8facee367565"
-    },
-    {
-      "category": "metadata",
-      "path": ".gitignore",
-      "bytes": 81,
-      "sha256": "ff06cbd918bedf87ac64d6336706a8eacfcc2663d5301b8c2c54a86f92876f27"
-    },
-    {
-      "category": "metadata",
-      "path": "LICENSE",
-      "bytes": 1086,
-      "sha256": "79c91547bdce42824a60f10b293c22a3bdca0dce3d4224a0c7020f372544fa90"
-    },
-    {
-      "category": "documentation",
-      "path": "MANUSCRIPT_METHODS_MAP.md",
-      "bytes": 3670,
-      "sha256": "2e332a5837197f7a8935e2597329b9b62672c313fa14ee2ee64e6a793cb7a8fb"
-    },
-    {
-      "category": "documentation",
-      "path": "README.md",
-      "bytes": 10688,
-      "sha256": "2bcabb3f797483b68d198721b472e33814fb46df2a9e58faf0f4c4a2d7060874"
-    },
-    {
-      "category": "documentation",
-      "path": "RELEASE_AUDIT.md",
-      "bytes": 3240,
-      "sha256": "3a061cb6c78cc00204bd6a2cbdac1b4f53d1e498325248864cafbb976b798b85"
-    },
-    {
-      "category": "documentation",
-      "path": "THIRD_PARTY_NOTICE.md",
-      "bytes": 704,
-      "sha256": "510bf519c6a9fb7ca4ce71171049f384152c8a5ae9aba82967c55e464d53ce96"
-    },
-    {
-      "category": "documentation",
-      "path": "docs/IMPLEMENTATION_SCOPE.md",
-      "bytes": 6507,
-      "sha256": "0e77351eba33cdaef48b91149add0d08639a5a487dbfdf113bde320aec5c86b0"
-    },
-    {
-      "category": "documentation",
-      "path": "docs/METHODS_CODE_ALIGNMENT_AUDIT_V2.md",
-      "bytes": 392,
-      "sha256": "fd508cd6ae41b3bc3c19c2e3e4e08274114e412db325328afc128ad97fee0338"
-    },
-    {
-      "category": "metadata",
-      "path": "docs/RUNTIME_BASELINE.json",
-      "bytes": 4577,
-      "sha256": "a377b7a49e11dcae31160f7e01a6e3088689218bf676c872cb4e530aed08f836"
-    },
-    {
-      "category": "metadata",
       "path": "pyproject.toml",
-      "bytes": 751,
       "sha256": "4fa97bff2ce1d8941f26794439b7f61e9be9a83629aa78e2c167e0fe53730930"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/__init__.py",
-      "bytes": 230,
       "sha256": "e02c05707ebab192327096382bc4f55bf766fc8d2fc1466b27bf7d13b793c58f"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/_bootstrap.py",
-      "bytes": 614,
       "sha256": "69b510a1591d9963adca21a5c3f53090734bf60a9b260bcaaa1aca468482eae1"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/__init__.py",
-      "bytes": 860,
       "sha256": "e0297b05d97af26a14572d31c05f3fc64c6f344ebf745a654551a82efb62428c"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/eef.py",
-      "bytes": 42020,
       "sha256": "a4446df2d82f8f544c0eb609e7c5b64579bbf04e34d240b3dc51f296f374c341"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/eef_benchmark.py",
-      "bytes": 16726,
       "sha256": "5cb49dcc7a8c0939478d16eaf2ec6af6eb32c7ef5395a789d86446ae24ad9cbe"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/evaluation.py",
-      "bytes": 8653,
       "sha256": "e5ff55a60578779c2decd75ebd673b82562809ffe8ff126e3a9576775d7f0071"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/experience.py",
-      "bytes": 23308,
       "sha256": "c8ef636c0ca157894f012bc4f808d4a7ff3f9703a23486d827571997472d7d6d"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/frozen.py",
-      "bytes": 2312,
       "sha256": "50408846ab1bb0faed8b31bb8d285942fbcb20069ac79770b00555453baa1698"
     },
     {
-      "category": "runtime",
-      "path": "src/cnm_swarm_sim/algorithm/individual_protocol.py",
-      "bytes": 9057,
-      "sha256": "365d1b0f1dd0acf4dba0ac7c7167036d6df7ebfa9c8a6695eafc8fc944f0a6d6"
-    },
-    {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/memory.py",
-      "bytes": 74283,
       "sha256": "6860b2bfc2f2693e059052c69d95fb5fd7cff019d01392d837d1db53c670ff5e"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/protocol.py",
-      "bytes": 6113,
       "sha256": "828605ccba1ef661f5c2b1a3bfd8b8e88416c8abfc7c769346d72f666ee9d9a6"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/reconfigurable_protocol.py",
-      "bytes": 7828,
       "sha256": "ab2a00c9fddfd807ad764c8bcbd8b111a045a21bccc2d7702b88746627ad0817"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/algorithm/rollout.py",
-      "bytes": 31454,
       "sha256": "3d9a8dfa346f48a55e8690ecea8d34ae7961e63d35c5355bd0994a721039dd76"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/build_formal_evidence_bundle.py",
-      "bytes": 18841,
       "sha256": "09c9c3db525c603c822e175a3d6abf56ca7dd97680c30c0df7203944874afb69"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/config.py",
-      "bytes": 2760,
       "sha256": "daa0e230fd2ad2e5e2261ce875d6068ff697d57f9da1755ce5f245265fa91d74"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/env.py",
-      "bytes": 35270,
       "sha256": "5c376a6448648505e56347566e14dc202f8fdfdcc15fc49fa7543cda60a2c369"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_collective_cnm_experiment.py",
-      "bytes": 42113,
       "sha256": "e0e32bc49d9eb3c484bbdd3bf47658aba539fb0621360d54acdd519ecddce037"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_context_evidence_ablation.py",
-      "bytes": 14219,
       "sha256": "923eace53e5a54f49f0651b9125cd84c19093e283fb11977d624fe9651d3677b"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_eef_formation_ablation.py",
-      "bytes": 12845,
       "sha256": "2a7b309e19b5da42d8c9b2097dc25e79a07c2582a06d9ebd2eee364e576d5f93"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_eef_study.py",
-      "bytes": 18065,
       "sha256": "7991e259e0efaeb9443be020f0262d345eefd89815864ba4ad97eb2f5678cb30"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_eef_training_efficiency.py",
-      "bytes": 53444,
       "sha256": "e4b10e1da07a07483a4337b727eaffaa95c6c6b700768dc8abbab698987a6a36"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_embodied_experience.py",
-      "bytes": 38093,
       "sha256": "33248117aa3b214f13c7f845fd8582fb623f62d8b69b9af0a608dbacfe51cc08"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/run_reconfigurable_individual_cnm.py",
-      "bytes": 41529,
       "sha256": "5fec0860c2fd84cb16619c5353efe3e8a01d180d994ff55c285efdd8a81b2d59"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/scenarios.py",
-      "bytes": 34899,
       "sha256": "21a8a9d6c9526be1b49f3bf36c4c53192ec8a9001b3e0b87d0dd08a1f8c08e6b"
     },
     {
-      "category": "runtime",
       "path": "src/cnm_swarm_sim/validate_release.py",
-      "bytes": 1572,
       "sha256": "f653a99d54fe64c471e6912213f62392d3ee70bdbef23a3db3c40f76ac4b1dff"
     },
     {
-      "category": "test",
-      "path": "tests/test_checkpoint_roundtrip.py",
-      "bytes": 949,
-      "sha256": "bbfd12264bcaa867fc5ec645a793f4e0f768317aa90b490796b5ca7dae7e7e05"
-    },
-    {
-      "category": "test",
       "path": "tests/test_core_mechanisms.py",
-      "bytes": 4531,
       "sha256": "341394e6c8a844c1422d24d0eff5481f4e7671335edda0eea94b108a1d42430c"
     },
     {
-      "category": "tool",
-      "path": "tools/verify_release.py",
-      "bytes": 1607,
-      "sha256": "58bcdfbb98b6db6a2b5c9b6ebca740ed8a27dece4acf73f5a0958eb0a98d53a2"
+      "path": "src/cnm_swarm_sim/algorithm/individual_protocol.py",
+      "sha256": "365d1b0f1dd0acf4dba0ac7c7167036d6df7ebfa9c8a6695eafc8fc944f0a6d6"
     }
-  ]
+  ],
+  "baseline_kind": "local pre-review working-tree bytes; Git line-ending conversion is disabled for the release"
 }
